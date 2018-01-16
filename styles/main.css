@@ -1,5 +1,4 @@
 /*GENERAL STYLES*/
-
 * {
 	margin: 0;
 	padding: 0;
@@ -7,6 +6,7 @@
 }
 
 html {
+	display: flex;
 	background-color: #434343;
 	color: #fff;
 	font-family: 'Electrolize', sans-serif;
@@ -62,12 +62,11 @@ hr {
 }
 
 #name {
-	flex-basis: 15%;
 	font-family: 'Dosis', sans-serif;
 	font-size: 9em;
 	color: #98D82A;
 	letter-spacing: .1em;
-	margin-top: 10%;
+	margin-top: 7%;
 }
 
 .slogan {
@@ -87,6 +86,7 @@ hr {
 .slogan-center {
 	margin: 12px 24px;
 }
+
 .pulse {
 	animation: pulse 3s infinite;
 	font-weight: bold;
@@ -121,6 +121,11 @@ hr {
 
 .link-icons i {
 	padding: 15px;
+	color: #fff;
+}
+
+.link-icons i:hover {
+	color: #98D82A;
 }
 
 .portrait {
@@ -133,12 +138,12 @@ hr {
 	transition: all 2s, transform .5s, box-shadow .5s;
 }
 
-.full {
+/* .full {
 	height: 900px;
 	min-width: 700px;
 	border-radius: 10px;
 	z-index: 10;
-}
+} */
 
 .portrait:hover {
 	box-shadow: 6px 6px 20px rgba(0, 0, 0, .9);
@@ -154,6 +159,14 @@ hr {
 	bottom: 10px;
 }
 
+.hero nav > li {
+	cursor: pointer;
+}
+
+
+
+
+
 @keyframes pulse {
   0% {
     opacity: 1;
@@ -163,24 +176,20 @@ hr {
 	}
 }
 
+
 /* KNOW STYLES */
-#know {
+.know {
 	flex-direction: column;
 	align-items: center;
 	line-height: 1.5;
 }
 
-#know hr {
+.know hr {
 	background-color: #000;
 }
 
-#know i {
+.know i {
 	color: #98D82A;
-}
-
-#know-quote {
-	font-size: 16px;
-	letter-spacing: 1.2px;
 }
 
 .know-rows div {
@@ -191,7 +200,7 @@ hr {
 	font-size: 18px;
 }
 
-#know-important {
+.know-important {
 	padding: 30px 25px;
 	border: 2px solid #000;
 	border-radius: 10px;
@@ -199,7 +208,7 @@ hr {
 	letter-spacing: 1.1px;
 }
 /* WHO STYLES */
-#who {
+.who {
 	min-height: 100vh;
 	align-items: center;
 	line-height: 1.5;
@@ -250,7 +259,7 @@ hr {
 
 
 /* PORTFOLIO STYLES */
-#portfolio {
+.portfolio {
 	display: flex;
 	justify-content: center;
 	text-align: center;

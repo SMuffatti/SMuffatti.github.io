@@ -1,24 +1,47 @@
-$('.portrait').click(function() {
-  $('.portrait').toggleClass("full");
+
+// $('.portrait').click(function() {
+//   $('.portrait').toggleClass("full");
+// });
+// REMOVED FULL CLASS TO ENLARGE PHOTO
+
+// Navbar Soft Scroll
+// REFACTOR IT!
+$("#know").click(function() {
+  $("html, body").animate({
+    scrollTop: $(".know").offset().top}, 'slow');
 });
+
+$("#who").click(function() {
+  $("html, body").animate({
+    scrollTop: $(".who").offset().top}, 'slow');
+});
+
+$("#portfolio").click(function() {
+  $("html, body").animate({
+    scrollTop: $(".portfolio").offset().top}, 'slow');
+});
+
+$("#contact").click(function() {
+  $("html, body").animate({
+    scrollTop: $(".contact").offset().top}, 'slow');
+});
+
+
+
+
+
+
+
+
+
 
 
 
 $(document).ready(function() {
-  quote();
   whoIcon();
   project_scroll();
 });
 
-// KNOW QUOTE HOVER
-function quote() {
-  $('#know-quote').hover(function() {
-    $main_text = $(this).text();
-    $(this).text('"The only thing I know is that I know nothing" -Plato\'s Socratic Paradox');
-  }, function() {
-    $(this).text($main_text);
-  });
-}
 
 //WHO ICON TOGGLE
 function whoIcon() {
@@ -53,6 +76,7 @@ $('#wd').click(function() {
   $('.wd').show();
   $('.who-display div').not('.wd').hide();
 });
+
 
 // PROJECT COVER REPEAL ON SCROLL
 function project_scroll() {
