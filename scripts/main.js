@@ -1,11 +1,7 @@
 
-// $('.portrait').click(function() {
-//   $('.portrait').toggleClass("full");
-// });
-// REMOVED FULL CLASS TO ENLARGE PHOTO
 
-// Navbar Soft Scroll
-// REFACTOR IT!
+
+// Navbar Soft Scroll - REFACTOR IT
 $("#know").click(function() {
   $("html, body").animate({
     scrollTop: $(".know").offset().top}, 'slow');
@@ -27,20 +23,31 @@ $("#contact").click(function() {
 });
 
 
+// Protrait Expand
+
+
+$(".portrait").click(function() {
+  $(".portrait_modal").css({
+    "display": "block",
+  });
+  $(".modal-content").  attr("src", "images/portrait.jpg");
+});
+
+// close modal
+$(".close").click(function() {
+  $(".portrait_modal").toggle();
+});
 
 
 
-
-
-
-
-
-
-
+// ON DOC READY
 $(document).ready(function() {
   whoIcon();
   project_scroll();
 });
+
+
+
 
 
 //WHO ICON TOGGLE
