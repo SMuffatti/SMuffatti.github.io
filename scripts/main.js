@@ -52,7 +52,7 @@ $(document).ready(function() {
 
 //WHO ICON TOGGLE
 function whoIcon() {
-  $('.who-select li').click(function() {
+  $('.who-icons li').click(function() {
     $('li').removeClass();
     $(this).addClass('active');
   });

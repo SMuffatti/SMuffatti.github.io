@@ -258,94 +258,62 @@ hr {
 
 
 /* KNOW STYLES */
+.background-know {
+	background-color: #434343;
+}
+
 .know {
 	flex-direction: column;
 	align-items: center;
+	justify-content: center;
 	line-height: 1.5;
+	min-height: 100vh;
 }
 
 .know hr {
-	background-color: #000;
+	background-color: #fff;
 }
 
 .know i {
 	color: #98D82A;
 }
 
-.know-rows div {
+.know_row div {
 	padding: 30px 0;
 }
 
-.know-rows div p {
+.know_row div p {
 	font-size: 18px;
 }
 
-.know-important {
+#know-important {
 	padding: 30px 25px;
 	border: 2px solid #000;
 	border-radius: 10px;
 	background-color: #98D82A;
+	color: #000;
 	letter-spacing: 1.1px;
+	margin: 100px auto;
 }
-/* WHO STYLES */
-.who {
-	min-height: 100vh;
-	align-items: center;
-	line-height: 1.5;
-	background: #000000;  /* fallback for old browsers */
-	background: -webkit-linear-gradient(to left, #434343, #000000);
-	background: linear-gradient(to left, #434343, #000000);
-}
-
-.who-area {
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-	width: 100%;
-	margin: 25px auto;
-}
-
-.who-select {
-	padding: 20px;
-	flex-basis: 15%;
-	text-align: center;
-}
-
-.who-select li {
-	font-size: 5em;
-	list-style: none;
-	padding: 15px;
-	border: 5px solid transparent;
-}
-
-.who-select i:hover {
-	color: #98D82A;
-}
-
-.active {
-	color: #98D82A;
-	border: 5px solid #98D82A !important;
-	border-radius: 15px;
-}
-
-.hidden {
-	display: none;
-}
-
-.who-display {
-	flex-basis: 80%;
-}
-
 
 
 /* PORTFOLIO STYLES */
+.background-portfolio {
+	background-color: #434343;
+}
+
 .portfolio {
 	display: flex;
 	justify-content: center;
-	text-align: center;
+	min-height: 100vh;
+}
+
+.portfolio h1 {
+	margin: 25px 0;
 }
 
 .project-rows {
+	margin: 25px;
 	text-align: left;
 }
 
@@ -366,9 +334,72 @@ hr {
 }
 
 
+/* WHO STYLES */
+.background-who {
+	background: #000000;  /* old browser support */
+	background: -webkit-linear-gradient(to top, #000000, #434343);
+	background: linear-gradient(to top, #000000, #434343);
+	height: 100vh;
+	width: 100%;
+}
+
+.who {
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	min-height: 100vh;
+	align-items: center;
+	line-height: 1.5;
+}
+
+/* .who-area {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	width: 100%;
+	margin: 25px auto;
+} */
+
+.who-icons {
+	/* padding: 20px; */
+	flex-basis: 20%;
+	text-align: center;
+	justify-content: space-around;
+}
+
+.who-icons li {
+	font-size: 5em;
+	list-style: none;
+	/* padding: 15px; */
+	justify-content: space-around;
+	border: 5px solid transparent;
+}
+
+.who-icons i:hover {
+	color: #98D82A;
+}
+
+.active {
+	color: #98D82A;
+	border: 5px solid #98D82A !important;
+	border-radius: 15px;
+}
+
+.hidden {
+	display: none;
+}
+
+.who-display {
+	flex-basis: 80%;
+	border: 1px dotted pink;
+}
+
+
 
 /* CONTACT STYLES */
-
+.background-contact {
+	background-color: #000;
+}
 .contact-box {
 	display: flex;
 	flex-direction: column;
