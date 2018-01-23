@@ -28,11 +28,6 @@ section:not(.hero) {
 	padding: 80px 50px;
 }
 
-section:not(.hero):nth-child(even) {
-	background-color: #ffffff;
-	color: #000;
-}
-
 nav li, a {
 	list-style: none;
 	text-decoration: none;
