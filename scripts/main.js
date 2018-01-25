@@ -1,5 +1,18 @@
+// PRELOADER FUNCTION
+$(window).on('load', function() {
+  $('.preloader').delay(0).fadeOut('slow');
+  $('body').delay(0).css({
+    'overflow':'visible'
+  });
+})
 
+$(".preloader").height($(window).height());
+$(".preloader").width($(window).width());
 
+$(".preloader img").css({
+    paddingTop: ($(".preloader").height() - $(".preloader img").height()) / 2,
+    paddingLeft: ($(".preloader").width() - $(".preloader img").width()) / 2,
+});
 
 // Navbar Soft Scroll - REFACTOR IT
 $("#know").click(function() {

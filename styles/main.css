@@ -12,6 +12,10 @@ html {
 	font-size: 20px;
 }
 
+body {
+	overflow: hidden;
+}
+
 section {
 	display: flex;
 	flex-direction: column;
@@ -39,6 +43,18 @@ hr {
 	width: 90%;
 	margin: 10px auto;
 	background-color: #fff;
+}
+
+/* PRELOADER STYLES */
+.preloader {
+	position: fixed;
+	cursor: none;
+	background-color: #000;
+	z-index: 10;
+}
+
+.preloader img {
+	display: block;
 }
 
 /* HERO STYLES */
