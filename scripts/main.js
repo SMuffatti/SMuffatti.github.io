@@ -1,7 +1,7 @@
 // PRELOADER FUNCTION
 $(window).on('load', function() {
-  $('.preloader').delay(0).fadeOut('slow');
-  $('body').delay(0).css({
+  $('.preloader').delay(400).fadeOut('slow');
+  $('body').delay(400).css({
     'overflow':'visible'
   });
 })
