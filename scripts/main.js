@@ -37,8 +37,6 @@ $("#contact").click(function() {
 
 
 // Protrait Expand
-
-
 $(".portrait").click(function() {
   $(".portrait_modal").css({
     "display": "block",
@@ -58,6 +56,23 @@ $(document).ready(function() {
   whoIcon();
   project_scroll();
 });
+
+$(window).on('resize', function() {
+  project_expand();
+});
+
+// PROJECT EXPAND DISPLAY
+$(".project").on('click', function() {
+  project_expand();
+});
+
+function project_expand() {
+  var vpw = $(window).width();
+  $(".project-expand").css({
+    "display": "flex",
+    "width": vpw +'px'
+  });
+}
 
 
 
