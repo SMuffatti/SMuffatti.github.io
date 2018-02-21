@@ -88,27 +88,27 @@ function whoIcon() {
 
 // WHO I AM TOGGLES
 $('#fe').click(function() {
-  $('.fe').show();
+  $('.fe').fadeIn("slow");
   $('.who-display div').not('.fe').hide();
 });
 
 $('#hw').click(function() {
-  $('.hw').show();
+  $('.hw').fadeIn("slow");
   $('.who-display div').not('.hw').hide();
 });
 
 $('#dm').click(function() {
-  $('.dm').show();
+  $('.dm').fadeIn("slow");
   $('.who-display div').not('.dm').hide();
 });
 
 $('#pa').click(function() {
-  $('.pa').show();
+  $('.pa').fadeIn("slow");
   $('.who-display div').not('.pa').hide();
 });
 
 $('#wd').click(function() {
-  $('.wd').show();
+  $('.wd').fadeIn("slow");
   $('.who-display div').not('.wd').hide();
 });
 

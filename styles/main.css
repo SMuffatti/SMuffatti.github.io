@@ -61,6 +61,38 @@ hr {
 	display: block;
 }
 
+/* FIXED ICON STYLES */
+.fixed-icons > div {
+	position: fixed;
+	background-color: #98D82A;
+	height: 50px;
+	width: 50px;
+	border-top-left-radius: 10px;
+	border-bottom-left-radius: 10px;
+	right: 0;
+	top: 75%;
+}
+
+.fixed-icons-email {
+
+}
+
+.fixed-icons-resume {
+	margin-top: 60px;
+}
+
+.fixed-icons > div:hover {
+	width: 65px;
+	transition: all .3s ease;
+}
+
+.fixed-icons  i {
+	color: #fff;
+	font-size: 40px;
+	margin: 5px;
+}
+
+
 /* HERO STYLES */
 .background-hero {
 	background: #000000;  /* old browser support */
@@ -467,6 +499,10 @@ hr {
 	margin-right: 15px;
 }
 
+.closebtn {
+
+}
+
 /* WHO STYLES */
 .background-who {
 	background: #000000;  /* old browser support */
@@ -480,21 +516,12 @@ hr {
 	display: flex;
 	flex-direction: row;
 	width: 100%;
-	min-height: 100vh;
+	height: 100vh;
 	align-items: center;
 	line-height: 1.5;
 }
 
-/* .who-area {
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-	width: 100%;
-	margin: 25px auto;
-} */
-
 .who-icons {
-	/* padding: 20px; */
 	flex-basis: 20%;
 	text-align: center;
 	justify-content: space-around;
@@ -503,8 +530,7 @@ hr {
 .who-icons li {
 	font-size: 5em;
 	list-style: none;
-	/* padding: 15px; */
-	justify-content: space-around;
+	margin: 20px 0;
 	border: 5px solid transparent;
 }
 
@@ -523,9 +549,14 @@ hr {
 }
 
 .who-display {
+	display: flex;
+	flex-direction: column;
 	flex-basis: 80%;
-	border: 1px dotted pink;
+	align-self: center;
+	margin-left: 40px;
+
 }
+
 
 
 
