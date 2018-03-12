@@ -61,10 +61,14 @@ $(window).on('resize', function() {
   project_expand();
 });
 
+
+
+
+
 // PROJECT EXPAND DISPLAY
-$(".project").on('click', function() {
-  project_expand();
-});
+// $(".project").on('click', function() {
+//   project_expand();
+// });
 
 function project_expand() {
   var vpw = $(window).width();
@@ -74,8 +78,15 @@ function project_expand() {
   });
 }
 
+$(".litiquest").on('click', function() {
+  project_expand();
+  $('.project_expand_container').not('#litiquest_content').hide();
+});
 
-
+$('#sittruststay').on('click', function() {
+  project_expand();
+  $('.project_expand_container').not('#sittruststay_content').hide();
+});
 
 
 //WHO ICON TOGGLE

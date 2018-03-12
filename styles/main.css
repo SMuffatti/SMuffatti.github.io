@@ -73,10 +73,6 @@ hr {
 	top: 75%;
 }
 
-.fixed-icons-email {
-
-}
-
 .fixed-icons-resume {
 	margin-top: 60px;
 }
@@ -385,6 +381,7 @@ hr {
 
 .project:hover {
 	background-color: #98D82A;
+	cursor: pointer;
 }
 
 .project-content {
@@ -449,12 +446,22 @@ hr {
 	max-width: 1000px;
 }
 
-.project-expand-container > img {
+.expand-container-content {
+	display: flex;
+	flex-direction: row;
+}
+
+.expand-container-content > img {
 	max-height: 400px;
 	margin: 50px 25px;;
 	border: 1px solid #000;
 }
 
+
+
+
+
+3
 .project-info {
 	margin: 50px 25px;
 }
