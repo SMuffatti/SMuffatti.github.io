@@ -1,0 +1,39 @@
+// Sass Variables
+$mainFont: 'Roboto', sans-serif;
+$titleFont: 'Exo', sans-serif;
+
+$purple: #621772;
+$purpleshadow: #370142;
+$green: #88D317;
+
+
+/********************
+BREAKPOINTS
+********************/
+$phone-width: 600px;
+$tablet-width: 900px;
+$desktop-width: 1200px;
+
+@mixin phone {
+  @media (max-width:600px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: #{$phone-width + 1px}) and (max-width: #{$tablet-width}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$tablet-width + 1px}) and (max-width: #{$desktop-width}) {
+    @content;
+  }
+}
+
+@mixin big-desktop {
+  @media (min-width: #{$desktop-width + 1px}) {
+    @content;
+  }
+}

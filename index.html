@@ -1,286 +1,338 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width initial-scale=1">
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Stephen Muffatti | Web Developer</title>
 
-	<title>smuffatti - Web Developer</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/styles.min.css">
 
-	<link rel="stylesheet" href="styles/main.css">
-	<link href="https://fonts.googleapis.com/css?family=Electrolize" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
-	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <!-- fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Exo:200|Roboto:300" rel="stylesheet">
 
-</head>
-<body>
+  </head>
+  <body>
 
-<!-- PRELOADER -->
-	<div class="preloader">
-			<img src="images/skeleton_walk.gif" alt="Skeleton">
-	</div>
+<!-- sidebar -->
+<section class="sidebar">
+  <div>
+    <div class="nameplate" id="hero">
+      <h2>Stephen Muffatti</h2>
+      <p>Web Developer</p>
+    </div>
+    <div class="navigation">
+      <ul>
+        <li class="nav-scroll" id="about"><a href="#about"><i data-feather="user"></i>About</a></li>
+        <li class="nav-scroll" id="skills"><a href="#skills"><i data-feather="database"></i>Skills</a></li>
+        <li class="nav-scroll" id="portfolio"><a href="#portfolio"><i data-feather="layout"></i>Portfolio</a></li>
+        <!-- <li><i data-feather="map"></i>Experience</li> -->
+        <li class="nav-scroll" id="contact"><a href="#contact"><i data-feather="send"></i>Contact</a></li>
+        <li><i data-feather="file-text"></i>Resume</li>
+      </ul>
+    </div>
+  </div>
+</section>
+<!-- end sidebar -->
 
-<!-- WRAPPER -->
-<div class="wrapper">
+<!-- modal -->
+<div id="myModal" class="modal">
 
-	<div class="fixed-icons">
-		<div class="fixed-icons-email"><a href="mailto:stephenmuffatti@gmail.com"><i class="fa fa-envelope" title="Email Me"></i></a></div>
-		<div class="fixed-icons-resume"><a href="Resume.pdf"><i class="fa fa-download" title="Download Resume" download="smuffatti_resume.pdf"></i></a></div>
-	</div>
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p>This site is still a work in progress, but it is a vast improvement over what it replaced. It will be constantly updated and improved until this message disappears... and welcome.</p>
+  </div>
 
-<!-- HERO -->
-	<div class="background-hero page">
-		<section class="hero">
-			<h2 id="name">smuffatti</h2>
-			<div class="tag_line">
-				<div class="carrot"><i class="fa fa-chevron-left"></i></div>
-				<div class="tag_content">
-					<p><i class="fa fa-chevron-right"></i> former educator</p>
-					<p><i class="fa fa-chevron-right"></i> self-taught web developer <span class="pulse">_</span></p>
-				</div>
-				<div class="carrot"><i class="fa fa-chevron-right"></i></div>
-			</div>
-
-			<div class="hero_content">
-				<p id="bio">Hello, my name is Stephen Muffatti and I enjoy web development and databases. I am a former educator and self-taught developer. I prefer doing things the right way, even if it takes mroe time. I am persistently on a quest to further my skills to be as useful a developer as possible. I was raised to believe in the notions of adapability and pragmatism and I strive to apply them in my work. </p>
-				<div class="link-icons">
-					<a href="https://github.com/SMuffatti"><i class="fa fa-github"></i></a>
-					<a href="https://codepen.io/SMuffatti"><i class="fa fa-codepen"></i></a>
-					<a href="https://twitter.com/TheSMuffatti"><i class="fa fa-twitter"></i></a>
-					<a href="https://www.freecodecamp.org/smuffatti"><i class="fa fa-free-code-camp"></i></a>
-				</div>
-
-				<div class="portrait"></div>
-
-				<div class="portrait_modal">
-					<span class="close">X</span>
-					<img class="modal-content">
-					<div class="caption">Zola through the woods.</div>
-				</div>
-			</div>
-			<hr>
-			<div class="hero_nav">
-				<a id="know">What I Know</a>
-				<a id="portfolio">Portfolio</a>
-				<a id="who">Who Am I?</a>
-				<a id="contact">Get In Touch</a>
-			</div>
-		</section>
-	</div>
-
-<!-- KNOW SECTION -->
-	<div class="background-know page">
-		<section class="know">
-			<h1>I Know</h1>
-			<hr>
-			<div class="know_row">
-				<div class="ui-ux">
-					<h4>Intuitive UI/UX Designs with HTML <i class="fa fa-html5"></i> & CSS <i class="fa fa-css3"></i></h4>
-					<p>Handcrafted structures and layouts planned with user interaction in mind. Assembled with Flexbox, CSS Grid, and Bootstrap. Built to specification with a keen eye towards detail and usability.</p>
-				</div>
-				<hr>
-				<div class="front-end">
-					<h4>Responsive Front End with JavaScript</h4>
-					<p>Website design and interaction with JavaScript and jQuery, bringing designs to life. I possess a strong familiarity with JSON and XML data. Keeping my code clean and readable is of paramount importance.</p>
-				</div>
-				<hr>
-				<div class="back-end">
-					<h4>Server-Side <i class="fa fa-database"></i></h4>
-					<p>Experience with back-end languages and databases which include: PHP & MySQL as well as Node & MongoDB. I also utilize WordPress as a content management system.</p>
-				</div>
-				<hr>
-				<div class="learning">
-					<h4>Present Study</h4>
-					<p>At present I am optimizing my workflow with Grunt, Sass, and Git - All of which I have some experience in. I am also learning about Search Engine Optimization.</p>
-				</div>
-			</div>
-			<p id="know-important"><strong>Most importantly, I know how to Google effectively.</strong></p>
-		</section>
-	</div>
-
-
-<!-- PORTFOLIO -->
-	<div class="background-portfolio page">
-		<section class="portfolio">
-			<h1>Projects, Demos, and Experiments (still a demo itself)</h1>
-			<!-- project expand display -->
-			<div class="project-expand">
-				<div class="project-expand-container">
-
-				<!-- litiquest -->
-					<div class="expand-container-content" id="litiquest_content">
-						<img src="images/litiquest.png">
-						<div class="project-info">
-							<div class="title">LitiQuest</div>
-							<div class="desc">A simple front end design with a background parallax and a WordPress content management system.</div>
-							<a class="visit_btn" href="http://www.litiquest.com/">
-								<i class="fa fa-arrow-left"></i>
-									VISIT SITE
-							</a>
-						</div>
-					</div>
-
-
-					<!-- sit trust stay -->
-					<div class="expand-container-content" id="sittruststay_content">
-						<img src="images/sittruststay.png">
-						<div class="project-info">
-							<div class="title">Sit Trust Stay</div>
-							<div class="desc">My first website build was for Julia Klaucke's dog training services. It is a learning experience that is constantly evolving.</div>
-							<a class="visit_btn" href="http://sittruststay.com">
-								<i class="fa fa-arrow-left"></i>
-								VISIT SITE
-							</a>
-						</div>
-					</div>
-
-
-
-
-
-				</div>
-				<div class="closebtn">X</div>
-			</div>
-			<!-- project tiles -->
-			<span>&lt;projects&gt;</span>
-			<div class="projects">
-
-				<div class="project litiquest">
-					<div class="project-content ">
-						<object data="images/logo.svg" type="image/svg+xml"></object>
-					</div>
-				</div>
-				<div class="project">
-					<div class="project-content" id="sittruststay">
-						<h4>Sit Trust Stay</h4>
-						<i class="fa fa-paw"></i>
-					</div>
-				</div>
-				<div class="project">
-					<div class="project-content">
-						<h4>Text Editor Graphic</h4>
-						<i class="fa fa-codepen"></i>
-					</div>
-				</div>
-				<div class="project">
-					<div class="project-content">
-						<h4>FCC: Local Weather App</h4>
-						<i class="fa fa-free-code-camp"></i>
-					</div>
-				</div>
-				<div class="project">
-					<div class="project-content">
-						<h4>FCC: Random Quote Machine</h4>
-						<i class="fa fa-free-code-camp"></i>
-					</div>
-				</div>
-				<div class="project">
-					<div class="project-content">
-						<h4>Responsive Full Screen Background</h4>
-						<i class="fa fa-codepen"></i>
-					</div>
-				</div>
-
-			</div>
-
-
-
-
-
-			<span>&lt;&sol;projects&gt;</span>
-		</section>
-	</div>
-
-
-	<!-- ADD A SCROLL LOCK TO CYCLE THROUGH WHAT I AM... MAYBE -->
-
-	<div class="background-who page">
-		<section class="who">
-
-			<div class="who-icons">
-				<li id="fe"><i class="fa fa-pencil"></i></li>
-				<li id="hw"><i class="fa fa-flask"></i></li>
-				<li id="dm"><i class="fa fa-magic"></i></li>
-				<li id="pa"><i class="fa fa-envira"></i></li>
-				<li id="wd"><i class="fa fa-home"></i></li>
-			</div>
-
-			<div class="who-display">
-				<div class="">
-					<h1>I Am...</h1>
-					<hr>
-					<p>Learn more about me, what I like, what I do, and what I want to be. Please click the icons to the left.</p>
-				</div>
-
-				<div class="hidden fe" >
-					<h1>I Am... A  Former Educator</h1>
-					<hr>
-					<p>I taught third through twelfth grade at the Beacon School in Stamford, CT. I specialized in history and technology, where I was the department head. I taught classes in robotics, 3D printing, object oriented programming, and web development. I led the FIRST robotics team and the lower school VEX IQ robotics team. I was constantly learning as I taught to bring more to the table and expand on the classes I was teaching.<p>
-				</div>
-
-				<div class="hidden hw">
-					<h1>I Am... A Homebrewer and Woodworker</h1>
-					<hr>
-					<p>I enjoy doing things myself and experimenting, to that end I have learned a great deal about woodworking and carpentry from my father. I use these skills to improve my life and build things that I can be proud of. At present I am building dog boxes to fit on the back of a truck to accommodate my girlfriend's mushing habit.</p>
-
-					<p>I also homebrew beer and more recently, wine. I enjoy the constant process of learning and the experience of doing things yourself, refining your practices. In order to brew bigger and better beers, I set it upon myself to build an electric brewery and become an amatuer electriction. The entire process took roughly six months of research and construction.</p>
-					<img height="500px" src="images/brewery.jpg" alt="Brewery" title="Home Built Electic Brewery">
-				</div>
-
-				<div class="hidden dm">
-					<h1>I Am... A Dungeon Master</h1>
-					<hr>
-					<p>Dungeons and Dragons has only been a hobby of mine since the release of 5th Edition. However, I was always a fan of RPGs such as Baldur's Gate and Neverwinter Nights growing up. I only mention my affinity for Dungeons and Dragons due to the fact that some of the skills and abilities lend themselves well to the workplace and web development. The organization, planning, and preparation for each session is something that I look forward to throughout the week. The joint storytelling with the players as events unfold require constant adaptation of my plans and flexibility to improvise on the spot.</p>
-				</div>
-
-				<div class="hidden pa">
-					<h1>I Am... A Keeper of Plants and Animals</h1>
-					<hr>
-					<p>I keep and raise many plants and animals. Every year I grow a diverse vegetable garden containing garlic, onions, tomatoes, various greens, as well as many other root vegetables such as beets and carrots. I enjoy growing from seed each spring and nurturing the plants to fruition. I find peace and happiness working the soil and seeing my labor turn into something others can enjoy. I am also constantly expanding the varieties of plants I grow, even into the realm of fungus with a recent foray into shiitake mushrooms. I also have a vast collection of exotic cacti and succulents for show and to test the fortitude of my green thumb.</p>
-
-					<p>My home is also populated by many siberian huskies, which my girlfriend races throughout New England. There are also a couple of cats which stalk the open beams of my house and a small flock of chickens who help to keep the garden pest free and produce my breakfast. Hopefully in the future I will be able to acquire a pair of goats.</p>
-				</div>
-
-				<div class="hidden wd">
-					<h1>I Am... A Web-Developer of the Earth</h1>
-					<hr>
-					<p>I like to build websites organically and let them grow as features and requirements increase. I don't try and force anything in my workflow or design and I find that it leads to a more natural and better user experience for both the client and the user. Web development is something that I enjoy and it is a means to an end to help achieve my goals of living sustainably and happily.</p>
-				</div>
-			</div>
-
-		</section>
-	</div>
-
-			<!-- <p>Some dude that's alright some of the time</p>
-			<p>Something about how I was an educator led robotics and 3d printing, about adapting and taking learning to the next level and mechanical engineer</p>
-			<p>Something about how I like to garden, brew, woodwork, and boardgames.</p>
-			<p>Something about what I want to do with my life in terms of goals and ambitions, dogs and gardens/chickens/homestead.</p>
-			<p>I built and electric brewery as a way to describe how I learn and tackle new tasks</p> -->
-
-	<div class="background-contact">
-		<section class="contact">
-			<div class="contact-box">
-				<h2>GET IN TOUCH</h2>
-				<hr>
-				<h5>FIND ME HERE</h5>
-				<div class="contact-icons">
-					<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-					<li id="mail"><a href="mailto:stephenmuffatti@gmail.com"><i class="fa fa-envelope"></i></a></li>
-					<li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-				</div>
-				<hr>
-				<p>I'm always interested in new projects and ideas. Email me.</p>
-			</div>
-		</section>
-	</div>
-
-<!-- END WRAPPER -->
 </div>
+<!-- end modal -->
 
-	<!-- jQuery CDN -->
-	<script
-	  src="https://code.jquery.com/jquery-3.2.1.min.js"
-	  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-	  crossorigin="anonymous"></script>
-		<script src="scripts/main.js"></script>
-</body>
+<!-- hero -->
+<section class="hero">
+  <div class="container-flex">
+    <div class="hero-tagline">
+      <h1>former educator</h1>
+      <h1>self-taught developer <span class="pulse"> _ </span></h1>
+    </div>
+    <div class="bubble-box">
+      <div class="pic-bubble">
+        <img id="bubble1" src="assets/images/bubble1.jpg" alt="" title="" />
+      </div>
+      <div class="pic-bubble">
+        <img id="bubble2" src="assets/images/bubble2.jpg" alt="" title="" />
+      </div>
+      <div class="pic-bubble">
+        <img id="bubble3" src="assets/images/bubble3.jpg" alt="" title="" />
+      </div>
+      <div class="pic-bubble">
+        <img id="bubble4" src="assets/images/bubble4.jpg" alt="" title="" />
+      </div>
+    </div>
+  </div>
+</section>
+<!-- end hero -->
+
+<!-- about -->
+<section class="about">
+  <div class="container-flex">
+    <div class="section-header">
+      <h2 class="title">About</h2>
+    </div>
+    <div class="container">
+      <div class="card">
+        <div class="about-content">
+          <p>Oh hey there, my name is Stephen and I am a web developer - but I assume you knew that already. I am self taught and constantly seeking to learn more as I create and build things for the web. I may not be the best or the smartest developer, but I am persistent and I firmly believe in doing thengs the <em>right</em> way.</p>
+          <br>
+          <p>Apart from web development, I maintain several hobbies - all of which I am constantly expanding on and improving. I enjoy growing plants from vegetables to exotic cacti and succulents. I make my own alcoholic beverages in a homemade electric brewery. I mill my own lumber and handcraft woodworking projects. When I want to relax, there's nothing better than some Dungeons & Dragons or a boardgame.</p>
+          <br>
+          <p>I try and live life as free as possible and to constantly seek happiness and productivity. In everything that I do, I try and apply the simple life rules of adapt, overcome, and improvise.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- end about -->
+
+<!-- skills -->
+<section class="skills">
+  <div class="container-flex">
+    <div class="section-header">
+      <h2 class="title">Skills</h2>
+    </div>
+    <div class="container">
+
+      <div class="card">
+        <div class="card-title">
+          <h2>HTML & CSS</h2>
+        </div>
+        <hr>
+        <div class="card-icon-row">
+          <div class="card-icon">
+            <img src="assets/images/HTML.png" alt="" title="" />
+            <h4>HTML5</h4>
+          </div>
+          <div class="card-icon">
+            <img src="assets/images/CSS.png" alt="" title="" />
+            <h4>CSS3</h4>
+          </div>
+          <div class="card-icon">
+            <img src="assets/images/Sass.png" alt="" title="" />
+            <h4>Sass</h4>
+          </div>
+          <div class="card-icon">
+            <img src="assets/images/Bootstrap.png" alt="" title="" />
+            <h4>Bootstrap</h4>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-title">
+          <h2>Javascript</h2>
+        </div>
+        <hr>
+        <div class="card-icon-row">
+          <div class="card-icon">
+            <img src="assets/images/Javascript.png" alt="" title="" />
+            <h4>Javascript</h4>
+          </div>
+          <div class="card-icon">
+            <img src="assets/images/jQuery.png" alt="" title="" />
+            <h4>jQuery</h4>
+          </div>
+          <div class="card-icon">
+            <img src="assets/images/node.png" alt="" title="" />
+            <h4>Node</h4>
+          </div>
+          <div class="card-icon">
+            <img src="assets/images/expressJS.png" alt="" title="" />
+            <h4>expressJS</h4>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-title">
+          <h2>Backend</h2>
+        </div>
+        <hr>
+        <div class="card-icon-row">
+          <div class="card-icon">
+            <img src="assets/images/php.png" alt="" title="" />
+            <h4>php</h4>
+          </div>
+          <div class="card-icon">
+            <img src="assets/images/MySQL.png" alt="" title="" />
+            <h4>MySQL</h4>
+          </div>
+          <div class="card-icon">
+            <img src="assets/images/mongoDB.png" alt="" title="" />
+            <h4>mongoDB</h4>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-title">
+          <h2>More</h2>
+        </div>
+        <hr>
+        <div class="card-icon-row">
+          <div class="card-icon">
+            <img src="assets/images/Grunt.png" alt="" title="" />
+            <h4>Grunt</h4>
+          </div>
+          <div class="card-icon">
+            <img src="assets/images/WordPress.png" alt="" title="" />
+            <h4>WordPress</h4>
+          </div>
+          <div class="card-icon">
+            <img src="assets/images/npm.png" alt="" title="" />
+            <h4>npm</h4>
+          </div>
+          <div class="card-icon">
+            <img src="assets/images/github.png" alt="" title="" />
+            <h4>github</h4>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+<!-- end skills -->
+
+<!-- portfolio -->
+<section class="portfolio">
+  <div class="container-flex">
+    <div class="section-header">
+      <h2 class="title">Portfolio</h2>
+    </div>
+    <div class="container">
+
+      <div class="row">
+        <div class="container50">
+          <div class="project-container">
+            <img src="assets/images/projects/sittruststay.png" alt="" title="" />
+            <div class="hover-title">
+              <a href="http://www.sittruststay.com"><h2>Sit Trust Stay <i data-feather="corner-right-up"></i></h2></a>
+            </div>
+          </div>
+        </div>
+        <div class="container50">
+          <div class="project-container">
+            <img src="assets/images/projects/litiquest.png" alt="" title="" />
+            <div class="hover-title">
+              <a href="http://www.litiquest.com/"><h2>LitiQuest <i data-feather="corner-right-up"></i></h2></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="container50">
+          <div class="project-container">
+            <img src="assets/images/projects/page-law.png" alt="" title="" />
+            <div class="hover-title">
+              <a href="https://www.pagelaw.com/car-crash-blog/"><h2>Page Law Car Crash Blog <i data-feather="corner-right-up"></i></h2></a>
+            </div>
+          </div>
+        </div>
+        <div class="container50">
+          <div class="project-container">
+            <img src="assets/images/projects/quote-machine.png" alt="" title="" />
+            <div class="hover-title">
+              <a href="https://codepen.io/SMuffatti/"><h2>FCC: Random Quote Machine <i data-feather="corner-right-up"></i></h2></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="row">
+        <div class="container50">
+          <div class="project-container">
+            <img src="assets/images/projects/local-weather.png" alt="" title="" />
+            <div class="hover-title">
+              <a href="https://codepen.io/SMuffatti/"><h2>FCC: Local Weather App <i data-feather="corner-right-up"></i></h2></a>
+            </div>
+          </div>
+        </div>
+        <div class="container50">
+          <div class="project-container">
+            <img src="assets/images/projects/quote-machine.png" alt="" title="" />
+            <div class="hover-title">
+              <a href="https://codepen.io/SMuffatti/"><h2>FCC: Random Quote Machine <i data-feather="corner-right-up"></i></h2></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="container50">
+          <div class="project-container">
+            <img src="assets/images/projects/ajax.png" alt="" title="" />
+            <div class="hover-title">
+              <a href="https://codepen.io/SMuffatti/"><h2>Ajax Requests 4 ways <i data-feather="corner-right-up"></i></h2></a>
+            </div>
+          </div>
+        </div>
+        <div class="container50"></div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- end portfolio -->
+
+<!-- experience -->
+<!-- <section class="experience">
+  <div class="container-flex">
+    <div class="section-header">
+      <h2 class="title">Experience</div>
+    </div>
+    <div class="container">
+
+    </div>
+  </div>
+</section> -->
+<!-- end experience -->
+
+<!-- contact -->
+<section class="contact">
+  <div class="container-flex">
+    <div class="section-header">
+      <h2 class="title">Contact</div>
+    </div>
+    <div class="container">
+      <div class="contact-box">
+        <h2>Get in touch</h2>
+        <hr>
+        <h5>Find me Here</h5>
+        <div class="contact-icons">
+          <li><a href="#"><i data-feather="twitter"></i></a></li>
+          <li id="mail"><a href="mailto:stephenmuffatti@gmail.com"><i data-feather="mail"></i></a></li>
+          <li><a href="#"><i data-feather="linkedin"></i></a></li>
+        </div>
+        <hr>
+        <p>I'm always interested in new pojects and ideas. Email me.</p>
+      </div>
+  </div>
+</section>
+<!-- end contact -->
+
+<!-- resume -->
+<!-- open  doc or download link? -->
+<!-- end remsume -->
+  </body>
+
+  <!-- Feather CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+  <script>  feather.replace() </script>
+
+  <!-- jQuery CDN -->
+  <script
+  src="http://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+
+  <!-- Custom Scripts -->
+  <script src="assets/js/scripts.min.js"></script>
 </html>

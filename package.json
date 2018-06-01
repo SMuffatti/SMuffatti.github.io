@@ -1,0 +1,21 @@
+{
+  "name": "portfolio_test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "Gruntfile.js",
+  "dependencies": {
+    "grunt": "^1.0.2",
+    "grunt-autoprefixer": "^3.0.4",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-jshint": "^1.1.0",
+    "grunt-contrib-sass": "^1.0.0",
+    "grunt-contrib-uglify": "^3.3.0",
+    "grunt-contrib-watch": "^1.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "\u001b[A\u001b[\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[Cindex.html\u001b[3~\u001b[B"
+  },
+  "author": "",
+  "license": "ISC"
+}

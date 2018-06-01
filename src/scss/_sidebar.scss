@@ -1,0 +1,57 @@
+// Sidebar Styles
+.sidebar {
+  position: fixed;
+  height: 100vh;
+  width: 225px;
+  background-color: #F1F1F1;
+  z-index: 2;
+  box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.4);
+  .nameplate {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    background-color: #fff;
+    border-bottom: 2px solid $purpleshadow;
+    letter-spacing: 1.1px;
+    &:hover {
+      cursor: pointer;
+    }
+    h2 {
+      color: $purpleshadow;
+    }
+  }
+  .navigation {
+    li {
+      display: flex;
+      align-items: center;
+      margin: 0 auto;
+      padding: 10px;
+      font-size: 24px;
+      line-height: 24px;
+      transition: all .2s ease-in-out;
+      &:hover {
+        cursor: pointer;
+        border-left: 4px solid $purple;
+        background-color: #fff;
+      }
+      &:active {
+        border-left: 4px solid $purple;
+        background-color: #fff;
+      }
+      svg {
+        padding-right: 3px;
+      }
+      a {
+        color: #000;
+      }
+    }
+  }
+}
+
+// Active State for Sidebar
+.active {
+  border-left: 4px solid $purple;
+  background-color: #fff;
+}

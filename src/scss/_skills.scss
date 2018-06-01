@@ -1,0 +1,26 @@
+// Skills Styles
+.skills {
+  .card {
+    margin: 20px auto;
+    width: 90%;
+    background-color: #fff;
+    box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.4);
+    .card-title {
+      font-family: $mainFont;
+      letter-spacing: 1.2px;
+      margin: 5px;
+    }
+    .card-icon-row {
+      display: flex;
+      flex-direction: row;
+      .card-icon {
+        margin: 5px 10px;
+        text-align: center;
+        img {
+          width: 100px;
+          height: 100px;
+        }
+      }
+    }
+  }
+}
