@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  // temp_modal();
+  temp_modal();
   randomize_bubbles();
   $(window).scroll(function() {
     scrollHandler();
@@ -57,7 +57,7 @@ $(".nameplate").on("click", function() {
 
 // Soft Scroll for Sidebar
 $("#sidebar-nav > ul > li").click(function(e) {
-  // e.preventDefault();
+  e.preventDefault();
   var curLink = $(this.children);
   var scrollPoint = $(curLink.attr('href')).position().top;
   $('body,html').animate({
