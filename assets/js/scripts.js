@@ -1,9 +1,18 @@
+$(document).ready(function() {
+  // temp_modal();
+  randomize_bubbles();
+  $(window).scroll(function() {
+    scrollHandler();
+  });
+
+});
+
+
 
 
 // Picture Bubble Randomization
 function randomize_bubbles() {
   var left_array = [];
-
   $('.pic-bubble').each(function() { //index as arg???
     var left_pos = Math.random() * ($('.bubble-box').width() - $(this).width());
     var top_pos = Math.random() * ($('.bubble-box').height() - $(this).height());
@@ -15,7 +24,22 @@ function randomize_bubbles() {
     });
   });
 }
-randomize_bubbles();
+
+function scrollHandler() {
+  // current scroll position
+  var curScrollPos = $(document).scrollTop();
+  // iterate through all the nodes in the list
+  $("#sidebar-nav > ul > li > a").each(function() {
+    var curLink = $(this);
+    var refElement = $(curLink.attr('href'));
+    if(refElement.position().top <= curScrollPos && refElement.position().top + refElement.height() > curScrollPos) {
+      $("#sidebar-nav > ul > li").removeClass("active");
+      curLink.parent().addClass("active");
+    } else {
+      curLink.parent().removeClass("active");
+    }
+  });
+}
 
 
 // Picture Bubble Modal on Click
@@ -32,28 +56,30 @@ $(".nameplate").on("click", function() {
 });
 
 // Soft Scroll for Sidebar
-$(".nav-scroll").on('click', function() {
-  var scrollto = "." + this.id;
-  $("html, body").animate({
-    scrollTop: $(scrollto).offset().top}, 'slow');
-  $(".nav-scroll").removeClass('active');
-  $(this).addClass('active');
+$("#sidebar-nav > ul > li").click(function(e) {
+  // e.preventDefault();
+  var curLink = $(this.children);
+  var scrollPoint = $(curLink.attr('href')).position().top;
+  $('body,html').animate({
+    scrollTop: scrollPoint
+  }, 500);
 });
 
 
 
 
-var modal = document.getElementById("myModal");
-var close = document.getElementsByClassName("close")[0];
-window.onload = function() {
+
+// temp modal while in dev
+function temp_modal() {
+  var modal = document.getElementById("myModal");
+  var close = document.getElementsByClassName("close")[0];
   modal.style.display = "block";
   close.onclick = function() {
     modal.style.display = "none";
   };
-};
-
-window.onclick = function(e) {
-  if(e.target == modal) {
-    modal.style.display = "none";
-  }
-};
+  window.onclick = function(e) {
+    if(e.target == modal) {
+      modal.style.display = "none";
+    }
+  };
+}

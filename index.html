@@ -4,10 +4,12 @@
     <meta charset="utf-8">
     <title>Stephen Muffatti | Web Developer</title>
 
-    <link rel="stylesheet" type="text/css" href="assets/css/styles.min.css">
+    <link rel="shortcut icon" href="assets/favicon.ico" />
+
+    <link rel="stylesheet" type="text/css" href="assets/css/styles.min.css" />
 
     <!-- fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Exo:200|Roboto:300" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Exo:200|Roboto:300" rel="stylesheet" />
 
   </head>
   <body>
@@ -19,13 +21,13 @@
       <h2>Stephen Muffatti</h2>
       <p>Web Developer</p>
     </div>
-    <div class="navigation">
+    <div class="navigation" id="sidebar-nav">
       <ul>
-        <li class="nav-scroll" id="about"><a href="#about"><i data-feather="user"></i>About</a></li>
-        <li class="nav-scroll" id="skills"><a href="#skills"><i data-feather="database"></i>Skills</a></li>
-        <li class="nav-scroll" id="portfolio"><a href="#portfolio"><i data-feather="layout"></i>Portfolio</a></li>
+        <li><a href="#about"><i data-feather="user"></i>About</a></li>
+        <li><a href="#skills"><i data-feather="database"></i>Skills</a></li>
+        <li><a href="#portfolio"><i data-feather="layout"></i>Portfolio</a></li>
         <!-- <li><i data-feather="map"></i>Experience</li> -->
-        <li class="nav-scroll" id="contact"><a href="#contact"><i data-feather="send"></i>Contact</a></li>
+        <li><a href="#contact"><i data-feather="send"></i>Contact</a></li>
         <li><i data-feather="file-text"></i>Resume</li>
       </ul>
     </div>
@@ -71,7 +73,7 @@
 <!-- end hero -->
 
 <!-- about -->
-<section class="about">
+<section class="about" id="about">
   <div class="container-flex">
     <div class="section-header">
       <h2 class="title">About</h2>
@@ -83,7 +85,7 @@
           <br>
           <p>Apart from web development, I maintain several hobbies - all of which I am constantly expanding on and improving. I enjoy growing plants from vegetables to exotic cacti and succulents. I make my own alcoholic beverages in a homemade electric brewery. I mill my own lumber and handcraft woodworking projects. When I want to relax, there's nothing better than some Dungeons & Dragons or a boardgame.</p>
           <br>
-          <p>I try and live life as free as possible and to constantly seek happiness and productivity. In everything that I do, I try and apply the simple life rules of adapt, overcome, and improvise.</p>
+          <p>I try and live life as free as possible and to constantly seek happiness and productivity. In everything that I do, I try and apply the simple life rules of: adapt, overcome, and improvise.</p>
         </div>
       </div>
     </div>
@@ -92,7 +94,7 @@
 <!-- end about -->
 
 <!-- skills -->
-<section class="skills">
+<section class="skills" id="skills">
   <div class="container-flex">
     <div class="section-header">
       <h2 class="title">Skills</h2>
@@ -201,7 +203,7 @@
 <!-- end skills -->
 
 <!-- portfolio -->
-<section class="portfolio">
+<section class="portfolio" id="portfolio">
   <div class="container-flex">
     <div class="section-header">
       <h2 class="title">Portfolio</h2>
@@ -238,9 +240,9 @@
         </div>
         <div class="container50">
           <div class="project-container">
-            <img src="assets/images/projects/quote-machine.png" alt="" title="" />
+            <img src="assets/images/projects/melius-research.png" alt="" title="" />
             <div class="hover-title">
-              <a href="https://codepen.io/SMuffatti/"><h2>FCC: Random Quote Machine <i data-feather="corner-right-up"></i></h2></a>
+              <a href="https://www.meliusresearch.com/"><h2>Melius Research<i data-feather="corner-right-up"></i></h2>
             </div>
           </div>
         </div>
@@ -275,7 +277,14 @@
             </div>
           </div>
         </div>
-        <div class="container50"></div>
+        <div class="container50">
+          <div class="project-container">
+            <img src="assets/images/projects/quote-machine.png" alt="" title="" />
+            <div class="hover-title">
+              <a href="https://codepen.io/SMuffatti/"><h2>FCC: Random Quote Machine <i data-feather="corner-right-up"></i></h2></a>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -296,7 +305,7 @@
 <!-- end experience -->
 
 <!-- contact -->
-<section class="contact">
+<section class="contact" id="contact">
   <div class="container-flex">
     <div class="section-header">
       <h2 class="title">Contact</div>
