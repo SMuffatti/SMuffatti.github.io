@@ -1,0 +1,83 @@
+#mobile-header {
+    display: none;
+    position: absolute;
+    font-family: $titleFont;
+    color: #F5F5F5;
+    padding: 0;
+    margin-left: 75px;
+    z-index: 20;
+    font-size: 2.5em;
+    letter-spacing: 1.2px;
+    @include phone {
+        display: block;
+    }
+}
+
+// mobile nav
+.mobile-nav-toggle {
+    display: none;
+    position: fixed;
+    height: 55px;
+    width: 100%;
+    z-index: 10;
+    background-color: $purple;
+    #burgerbtn {
+        border-top: 2px solid #fff;
+        height: 25px;
+        width: 30px;
+        box-sizing: border-box;
+        position: absolute;
+        z-index: 12;
+        left: 20px;
+        top: 15px;
+
+        cursor: pointer;
+        transition: all 0.3s ease-in;
+        &:before, &:after {
+            content: "";
+            display: block;
+            position: absolute;
+            height: 2px;
+            width: 30px;
+            left: 0;
+            background-color: #fff;
+            transition: all 0.3s ease-in;
+        }
+        &:before {
+            top: 10px;
+        }
+        &:after {
+            bottom: 0;
+        }
+    }
+}
+
+@include phone {
+    .mobile-nav-toggle {
+        display: block;
+    }
+}
+
+// Active State for burgerbtn
+#burgerbtn.burger-toggle-active {
+    border-color: transparent;
+    &:before {
+        transform: rotate(45deg);
+        width: 33px;
+        left: -2px;
+    }
+    &:after {
+        transform: rotate(135deg);
+        bottom: 11px;
+        width: 33px;
+        left: -2px;
+    }
+
+}
+
+section.burger-toggle-active {
+    margin-left: 225px;
+    margin-right: -225px;
+    opacity: 0.4;
+    transition: all 0.3s ease-in-out;
+}

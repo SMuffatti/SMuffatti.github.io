@@ -51,7 +51,21 @@
 }
 
 // Active State for Sidebar
-.active {
+.active-sidebar-li {
   border-left: 4px solid $purple;
   background-color: #fff;
+}
+
+
+@include phone {
+    .sidebar {
+        margin-left: -225px;
+        padding-top: 55px;
+        box-shadow: none;
+        transition: all .3s ease-in-out;
+    }
+    .sidebar.active {
+        margin-left: 0;
+
+    }
 }

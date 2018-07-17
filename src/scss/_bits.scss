@@ -10,30 +10,30 @@ $green: #88D317;
 /********************
 BREAKPOINTS
 ********************/
-$phone-width: 600px;
-$tablet-width: 900px;
-$desktop-width: 1200px;
+$max-phone-width: 600px;
+$max-tablet-width: 1199px;
+$max-desktop-width: 1800px;
 
 @mixin phone {
-  @media (max-width:600px) {
+  @media (max-width: $max-phone-width) {
     @content;
   }
 }
 
 @mixin tablet {
-  @media (min-width: #{$phone-width + 1px}) and (max-width: #{$tablet-width}) {
+  @media (min-width: #{$max-phone-width + 1px}) and (max-width: #{$max-tablet-width}) {
     @content;
   }
 }
 
 @mixin desktop {
-  @media (min-width: #{$tablet-width + 1px}) and (max-width: #{$desktop-width}) {
+  @media (min-width: #{$max-tablet-width + 1px}) and (max-width: #{$max-desktop-width}) {
     @content;
   }
 }
 
 @mixin big-desktop {
-  @media (min-width: #{$desktop-width + 1px}) {
+  @media (min-width: #{$max-desktop-width + 1px}) {
     @content;
   }
 }

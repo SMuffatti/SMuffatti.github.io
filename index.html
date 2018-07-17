@@ -2,11 +2,12 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Stephen Muffatti | Web Developer</title>
 
     <link rel="shortcut icon" href="assets/favicon.ico" />
 
-    <link rel="stylesheet" type="text/css" href="assets/css/styles.min.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/app.min.css" />
 
     <!-- fonts -->
     <link href="https://fonts.googleapis.com/css?family=Exo:200|Roboto:300" rel="stylesheet" />
@@ -15,7 +16,7 @@
   <body>
 
 <!-- sidebar -->
-<section class="sidebar">
+<div class="sidebar">
   <div>
     <div class="nameplate" id="hero">
       <h2>Stephen Muffatti</h2>
@@ -32,8 +33,16 @@
       </ul>
     </div>
   </div>
-</section>
+</div>
 <!-- end sidebar -->
+
+<!-- mobile nav -->
+<h2 id="mobile-header">SMuffatti</h2>
+<div class="mobile-nav-toggle">
+    <div id="burgerbtn"></div>
+</div>
+<!-- end mobile nav -->
+
 
 <!-- modal -->
 <div id="myModal" class="modal">
@@ -81,11 +90,11 @@
     <div class="container">
       <div class="card">
         <div class="about-content">
-          <p>Oh hey there, my name is Stephen and I am a web developer - but I assume you knew that already. I am self taught and constantly seeking to learn more as I create and build things for the web. I may not be the best or the smartest developer, but I am persistent and I firmly believe in doing thengs the <em>right</em> way.</p>
+          <p>Oh hey there, my name is Stephen and I am a web developer - but I assume you knew that already. I am self taught and constantly seeking to learn more as I create and build things for the web. I may not be the best or the smartest developer, but I am persistent and I firmly believe in doing things the <em>right</em> way.</p>
           <br>
           <p>Apart from web development, I maintain several hobbies - all of which I am constantly expanding on and improving. I enjoy growing plants from vegetables to exotic cacti and succulents. I make my own alcoholic beverages in a homemade electric brewery. I mill my own lumber and handcraft woodworking projects. When I want to relax, there's nothing better than some Dungeons & Dragons or a boardgame.</p>
           <br>
-          <p>I try and live life as free as possible and to constantly seek happiness and productivity. In everything that I do, I try and apply the simple life rules of: adapt, overcome, and improvise.</p>
+          <p>I try and live life as free as possible and to constantly seek happiness and be productive. In everything that I do, I try and apply the simple life rules of: adapt, overcome, and improvise.</p>
         </div>
       </div>
     </div>
@@ -191,8 +200,8 @@
             <h4>npm</h4>
           </div>
           <div class="card-icon">
-            <img src="assets/images/github.png" alt="" title="" />
-            <h4>github</h4>
+            <img src="assets/images/git.png" alt="" title="" />
+            <h4>git</h4>
           </div>
         </div>
       </div>
@@ -209,121 +218,95 @@
       <h2 class="title">Portfolio</h2>
     </div>
     <div class="container">
-
       <div class="row">
-        <div class="container50">
+          <!-- sit trust stay -->
           <div class="project-container">
             <img src="assets/images/projects/sittruststay.png" alt="" title="" />
             <div class="hover-title">
               <a href="http://www.sittruststay.com"><h2>Sit Trust Stay <i data-feather="corner-right-up"></i></h2></a>
             </div>
           </div>
-        </div>
-        <div class="container50">
-          <div class="project-container">
-            <img src="assets/images/projects/litiquest.png" alt="" title="" />
-            <div class="hover-title">
-              <a href="http://www.litiquest.com/"><h2>LitiQuest <i data-feather="corner-right-up"></i></h2></a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="container50">
-          <div class="project-container">
-            <img src="assets/images/projects/page-law.png" alt="" title="" />
-            <div class="hover-title">
-              <a href="https://www.pagelaw.com/car-crash-blog/"><h2>Page Law Car Crash Blog <i data-feather="corner-right-up"></i></h2></a>
-            </div>
-          </div>
-        </div>
-        <div class="container50">
+          <!-- Melius Research -->
           <div class="project-container">
             <img src="assets/images/projects/melius-research.png" alt="" title="" />
             <div class="hover-title">
               <a href="https://www.meliusresearch.com/"><h2>Melius Research<i data-feather="corner-right-up"></i></h2>
             </div>
           </div>
-        </div>
+      </div>
+
+      <div class="row">
+          <!-- LitiQuest -->
+          <div class="project-container">
+            <img src="assets/images/projects/litiquest.png" alt="" title="" />
+            <div class="hover-title">
+              <a href="http://www.litiquest.com/"><h2>LitiQuest <i data-feather="corner-right-up"></i></h2></a>
+            </div>
+          </div>
+          <!-- Litify Inbox -->
+          <div class="project-container">
+              <img src="assets/images/projects/Litify-Inbox.png" alt="" title="" />
+              <div class="hover-title">
+                  <a href="https://www.litify.com/inbox/"><h2>Litify Inbox <a data-feather="corner-right-up"></i></h2></a>
+              </div>
+          </div>
       </div>
 
 
       <div class="row">
-        <div class="container50">
+          <!-- Page Law Car Crash Blog -->
+          <div class="project-container">
+            <img src="assets/images/projects/page-law.png" alt="" title="" />
+            <div class="hover-title">
+              <a href="https://www.pagelaw.com/car-crash-blog/"><h2>Page Law Car Crash Blog <i data-feather="corner-right-up"></i></h2></a>
+            </div>
+          </div>
+
+          <!-- Codepen Portfolio -->
           <div class="project-container">
             <img src="assets/images/projects/local-weather.png" alt="" title="" />
             <div class="hover-title">
-              <a href="https://codepen.io/SMuffatti/"><h2>FCC: Local Weather App <i data-feather="corner-right-up"></i></h2></a>
+              <a href="https://codepen.io/SMuffatti/"><h2>FCC: Codepen Projects <i data-feather="corner-right-up"></i></h2></a>
             </div>
           </div>
-        </div>
-        <div class="container50">
-          <div class="project-container">
-            <img src="assets/images/projects/quote-machine.png" alt="" title="" />
-            <div class="hover-title">
-              <a href="https://codepen.io/SMuffatti/"><h2>FCC: Random Quote Machine <i data-feather="corner-right-up"></i></h2></a>
-            </div>
-          </div>
-        </div>
-      </div>
 
       <div class="row">
-        <div class="container50">
-          <div class="project-container">
-            <img src="assets/images/projects/ajax.png" alt="" title="" />
+          <!-- Lumi Lorono Portfolio -->
+          <!-- <div class="project-container">
+            <img src="assets/images/projects/local-weather.png" alt="" title="" />
             <div class="hover-title">
-              <a href="https://codepen.io/SMuffatti/"><h2>Ajax Requests 4 ways <i data-feather="corner-right-up"></i></h2></a>
+              <a href=""><h2>Lumi Lorono <i data-feather="corner-right-up"></i></h2></a>
             </div>
-          </div>
-        </div>
-        <div class="container50">
-          <div class="project-container">
-            <img src="assets/images/projects/quote-machine.png" alt="" title="" />
-            <div class="hover-title">
-              <a href="https://codepen.io/SMuffatti/"><h2>FCC: Random Quote Machine <i data-feather="corner-right-up"></i></h2></a>
-            </div>
-          </div>
-        </div>
+          </div> -->
+
       </div>
+
     </div>
   </div>
 </section>
 <!-- end portfolio -->
 
-<!-- experience -->
-<!-- <section class="experience">
-  <div class="container-flex">
-    <div class="section-header">
-      <h2 class="title">Experience</div>
-    </div>
-    <div class="container">
-
-    </div>
-  </div>
-</section> -->
-<!-- end experience -->
-
 <!-- contact -->
 <section class="contact" id="contact">
-  <div class="container-flex">
-    <div class="section-header">
-      <h2 class="title">Contact</div>
-    </div>
-    <div class="container">
-      <div class="contact-box">
-        <h2>Get in touch</h2>
-        <hr>
-        <h5>Find me Here</h5>
-        <div class="contact-icons">
-          <li><a href="#"><i data-feather="twitter"></i></a></li>
-          <li id="mail"><a href="mailto:stephenmuffatti@gmail.com"><i data-feather="mail"></i></a></li>
-          <li><a href="#"><i data-feather="linkedin"></i></a></li>
+    <div class="container-flex">
+        <div class="section-header">
+            <h2 class="title">Contact</h2>
         </div>
-        <hr>
-        <p>I'm always interested in new pojects and ideas. Email me.</p>
-      </div>
-  </div>
+        <div class="container">
+            <div class="contact-box">
+                <h2>Get in touch</h2>
+                <hr>
+                <h5>Find me Here</h5>
+                <ul class="contact-icons">
+                    <li><a href="#"><i data-feather="twitter"></i></a></li>
+                    <li id="mail"><a href="mailto:stephenmuffatti@gmail.com"><i data-feather="mail"></i></a></li>
+                    <li><a href="#"><i data-feather="linkedin"></i></a></li>
+                </ul>
+                <hr>
+                <p>I'm always interested in new projects and ideas. Email me.</p>
+            </div>
+        </div>
+    </div>
 </section>
 <!-- end contact -->
 
@@ -343,5 +326,5 @@
   crossorigin="anonymous"></script>
 
   <!-- Custom Scripts -->
-  <script src="assets/js/scripts.min.js"></script>
+  <script src="assets/js/app.min.js"></script>
 </html>

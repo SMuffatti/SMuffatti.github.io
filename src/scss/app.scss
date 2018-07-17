@@ -1,0 +1,135 @@
+@import 'bits';
+@import 'sidebar';
+@import 'nav';
+@import 'hero';
+@import 'portfolio';
+@import 'skills';
+@import 'contact';
+
+
+// General Styles
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url("../images/background.png");
+  font-family: $mainFont;
+  max-width: 100%;
+  overflow-x: hidden;
+  section {
+      overflow: hidden;
+  }
+  a {
+    text-decoration: none;
+    color: #fff;
+  }
+  ul {
+    list-style: none;
+  }
+  .section-header {
+    position: relative;
+    height: 75px;
+    background-color: $purple;
+    width: 100%;
+    @include phone {
+        max-height: 55px;
+    }
+    .title {
+      position: relative;
+      font-family: $titleFont;
+      color: #F5F5F5;
+      font-size: 3em;
+      letter-spacing: 1.2px;
+      padding: 5px 25px;
+      @include phone {
+          padding: 0;
+          margin-left: 75px;
+          z-index: 20;
+          font-size: 2.5em;
+      }
+    }
+  }
+  .container-flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: inherit;
+    padding-left: 225px;
+    position: relative;
+    overflow: hidden;
+    @include phone {
+        padding-left: 0;
+    }
+  }
+  .container {
+    margin: 20px auto;
+    max-width: 1200px;
+    position: relative;
+    overflow: hidden;
+  }
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    .container50 {
+      flex-basis: 50%;
+    }
+  }
+}
+
+// About Styles
+.about {
+  .card {
+    margin: 20px auto;
+    width: 90%;
+    background-color: #fff;
+    box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.4);
+    .about-content {
+      padding: 25px;
+      line-height: 1.2;
+      letter-spacing: 1.1px;
+      text-align: center;
+    }
+  }
+}
+
+
+
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 10;
+  padding-top: 20%;
+  left: 0;
+  top: 0;
+  width: 100%;
+
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+  .modal-content {
+    background-color: #F4F4F4;
+    margin: auto;
+    padding: 25px;
+    border: 1px solid $purpleshadow;
+    width: 80%;
+    max-width: 1200px;
+    .close {
+      color: #aaaaaa;
+      float: right;
+      font-size: 24px;
+      font-weight: bold;
+      &:hover, :focus {
+        color: $purpleshadow;
+        text-decoration: none;
+        cursor: pointer;
+      }
+    }
+  }
+}

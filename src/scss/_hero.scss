@@ -1,0 +1,127 @@
+// Hero Styles
+.hero {
+  background-image: url("../images/hero2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 85% 50%;
+  height: 100vh;
+  filter: grayscale(75%);
+  .hero-tagline {
+    position: relative;
+    font-size: 2em;
+    top: 15%;
+    right: 40%;
+    margin-left: 225px;
+    padding-left: 50px;
+    z-index: 50;
+    color: #fff;
+    &:hover {
+      cursor: default;
+    }
+    .pulse {
+    	animation: pulse 2s infinite;
+    	font-weight: bold;
+    }
+  }
+  .bubble-box {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    // padding 50% of bubbles to keep them on hero
+    padding: 100px;
+    .pic-bubble {
+      position: absolute;
+      margin: 50px;
+      height: 200px;
+      width: 200px;
+      border-radius: 50%;
+      border: 3px solid $purple;
+      background-color: $purpleshadow;
+      box-sizing: border-box;
+      overflow: hidden;
+      box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+    	transform: translatey(0px);
+    	animation-name: float;
+      // animation-duration: 6s;
+      animation-timing-function: ease-in-out;
+      animation-iteration-count: infinite;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      #bubble2 {
+
+      }
+      #bubble3 {
+        transform: rotate(90deg);
+
+      }
+      #bubble4 {
+
+      }
+    }
+  }
+}
+
+@keyframes float {
+	0% {
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		transform: translatey(0px);
+	}
+	50% {
+		box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2);
+		transform: translatey(-20px);
+	}
+	100% {
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		transform: translatey(0px);
+	}
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 1;
+  }
+	50% {
+		opacity: 0;
+	}
+}
+
+//BREAKPOINTS
+@include desktop {
+    .hero {
+        .hero-tagline {
+            right: 35%;
+        }
+    }
+}
+@include tablet {
+    .hero {
+        .hero-tagline {
+            position: absolute;
+            font-size: 1.5em;
+            top: 10%;
+            right: 25%;
+        }
+        .bubble-box {
+            display: none;
+        }
+    }
+}
+
+@include phone {
+    .hero {
+         background-position: 95% 50%;
+        .hero-tagline {
+            position: absolute;
+            margin: 0 auto;
+            font-size: 1em;
+            top: 10%;
+        }
+        .bubble-box {
+            display: none;
+
+        }
+    }
+}

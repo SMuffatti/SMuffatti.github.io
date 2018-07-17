@@ -12,18 +12,25 @@ module.exports = function(grunt) {
           noCache: true,
         },
         files: {
-          'assets/css/styles.min.css' : 'src/scss/styles.scss' //'destination' : 'source'
-        }
+          'assets/css/app.min.css' : 'src/scss/app.scss' //'destination' : 'source'
+        },
       }
     },
 
-    // Autoprefixer
-    autoprefixer: {
-      my_target: {
-        files: {
-          'assets/css/styles.min.css' : 'src/scss/styles/scss'
+    postcss: {
+        options: {
+            map: false,
+            processors: [
+                require('pixrem')(), //rem unit fallback
+                require('autoprefixer')({
+                    browsers: 'last 2 versions'
+                }), //vendor prefixes
+                require('cssnano')() //minify the result
+            ]
+        },
+        dist: {
+            src: 'assets/css/*.css'
         }
-      }
     },
 
     // JSHint
@@ -31,25 +38,19 @@ module.exports = function(grunt) {
       all: ['Gruntfile.js', 'src/js/*.js']
     },
 
-    // Concat
+    //concat js files
     concat: {
-      cs: {
-        src: ['src/scss/styles.scss', 'src/vendor/slick/*.scss'],
-        dest: 'assets/css/styles.min.css'
-      },
-      js: {
-        src: ['src/js/*.js', 'src/vendor/slick/slick.js'],
-        dest: 'assets/js/scripts.js'
-      }
+        core: {
+            src: ['src/js/app.js'],
+            dest: 'src/js/compiled/compiled.js'
+        }
     },
-
-
 
     // Uglify
     uglify: {
       my_target: {
         files: {
-          'assets/js/scripts.min.js' : ['src/js/scripts.js']
+          'assets/js/app.min.js' : ['src/js/compiled/compiled.js']
         }
       }
     },
@@ -61,23 +62,23 @@ module.exports = function(grunt) {
         livereload : true
       },
       grunt: {
-        files: ['Gruntfile.js', 'templates/*.html', '*.php', 'views/*.php']
-      },
-      sass: {
-        files: ['src/scss/*.scss'],
-        tasks: ['sass']
+        files: ['Gruntfile.js']
       },
       js: {
-        files: ['src/js/*.js'],
-        tasks: ['jshint', 'concat', 'uglify', 'sass']
-      }
+          files: ['src/js/*.js'],
+          tasks: ['jshint', 'concat', 'uglify']
+      },
+      sass: {
+        files: ['src/scss/*.scss', 'src/scss/**/*.scss'],
+        tasks: ['sass', 'postcss', 'concat']
+      },
     }
-
   });
 
   // Load Plugins
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-autoprefixer');
+  grunt.loadNpmTasks('grunt-postcss');
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-uglify');
@@ -85,7 +86,7 @@ module.exports = function(grunt) {
 
 
   // Register tasks
-  grunt.registerTask('build', [ 'jshint', 'concat', 'sass', 'uglify']);
+  grunt.registerTask('build', [ 'sass', 'postcss', 'concat', 'uglify']);
   grunt.registerTask('default', ['build', 'watch']);
 
 };
