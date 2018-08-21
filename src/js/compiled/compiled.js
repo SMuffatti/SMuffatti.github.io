@@ -1,46 +1,63 @@
 $(document).ready(function() {
-  temp_modal();
+
+    // Picture Bubble Randomization
+    function randomize_bubbles() {
+      var left_array = [];
+      $('.pic-bubble').each(function() { //index as arg???
+        var left_pos = Math.random() * ($('.bubble-box').width() - $(this).width());
+        var top_pos = Math.random() * ($('.bubble-box').height() - $(this).height());
+        var hover_time = ((Math.random() * 10) + 3)+"s";
+        $(this).css({
+          left: left_pos,
+          top: top_pos,
+          "animation-duration": hover_time
+        });
+      });
+    }
+    randomize_bubbles();
+
+    // sidebar scroll handler
+    function scrollHandler() {
+      // current scroll position
+      var curScrollPos = $(document).scrollTop();
+      // iterate through all the nodes in the list
+      $("#sidebar-nav > ul > li > a").each(function() {
+        var curLink = $(this);
+        var refElement = $(curLink.attr('href'));
+        if(refElement.position().top - 50 <= curScrollPos && refElement.position().top + refElement.height() > curScrollPos) {
+          $("#sidebar-nav > ul > li").removeClass("active-sidebar-li");
+          curLink.parent().addClass("active-sidebar-li");
+        } else {
+          curLink.parent().removeClass("active-sidebar-li");
+        }
+      });
+    }
+
+
+
+
+
   burgerbtn_toggle();
-  randomize_bubbles();
-  $(window).scroll(function() {
-    scrollHandler();
-  });
+
+
+    // Scroll handler
+    $(window).scroll(function() {
+        scrollHandler();
+    });
+
+    // Preloader
+    $(window).on('load', function() {
+      $('.preloader').fadeOut('slow', function() {
+          $(this).remove();
+      });
+    });
 
 });
 
 
 
 
-// Picture Bubble Randomization
-function randomize_bubbles() {
-  var left_array = [];
-  $('.pic-bubble').each(function() { //index as arg???
-    var left_pos = Math.random() * ($('.bubble-box').width() - $(this).width());
-    var top_pos = Math.random() * ($('.bubble-box').height() - $(this).height());
-    var hover_time = ((Math.random() * 10) + 3)+"s";
-    $(this).css({
-      left: left_pos,
-      top: top_pos,
-      "animation-duration": hover_time
-    });
-  });
-}
 
-function scrollHandler() {
-  // current scroll position
-  var curScrollPos = $(document).scrollTop();
-  // iterate through all the nodes in the list
-  $("#sidebar-nav > ul > li > a").each(function() {
-    var curLink = $(this);
-    var refElement = $(curLink.attr('href'));
-    if(refElement.position().top <= curScrollPos && refElement.position().top + refElement.height() > curScrollPos) {
-      $("#sidebar-nav > ul > li").removeClass("active-sidebar-li");
-      curLink.parent().addClass("active-sidebar-li");
-    } else {
-      curLink.parent().removeClass("active-sidebar-li");
-    }
-  });
-}
 
 
 // Picture Bubble Modal on Click
@@ -78,23 +95,4 @@ function burgerbtn_toggle() {
             $('.sidebar').toggleClass('active');
         });
     }
-}
-
-
-
-
-
-// temp modal while in dev
-function temp_modal() {
-  var modal = document.getElementById("myModal");
-  var close = document.getElementsByClassName("close")[0];
-  modal.style.display = "block";
-  close.onclick = function() {
-    modal.style.display = "none";
-  };
-  window.onclick = function(e) {
-    if(e.target == modal) {
-      modal.style.display = "none";
-    }
-  };
 }

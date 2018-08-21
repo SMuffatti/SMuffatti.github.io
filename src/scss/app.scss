@@ -2,6 +2,7 @@
 @import 'sidebar';
 @import 'nav';
 @import 'hero';
+@import 'about';
 @import 'portfolio';
 @import 'skills';
 @import 'contact';
@@ -70,7 +71,6 @@ body {
     margin: 20px auto;
     max-width: 1200px;
     position: relative;
-    overflow: hidden;
   }
   .row {
     display: flex;
@@ -82,54 +82,62 @@ body {
   }
 }
 
-// About Styles
-.about {
-  .card {
-    margin: 20px auto;
-    width: 90%;
+
+
+
+// preloader
+.preloader {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
     background-color: #fff;
-    box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.4);
-    .about-content {
-      padding: 25px;
-      line-height: 1.2;
-      letter-spacing: 1.1px;
-      text-align: center;
+    z-index: 10;
+    .preloader-wrapper {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        span {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border-radius: 100%;
+            background-color: $purple;
+            margin: 35px 5px;
+        }
+        span:nth-child(1) {
+            animation: bounce 2s ease-in-out infinite;
+        }
+        span:nth-child(2) {
+            animation: bounce 2s ease-in-out 0.4s infinite;
+        }
+        span:nth-child(3) {
+            animation: bounce 2s ease-in-out 0.8s infinite;
+        }
+        span:nth-child(4) {
+            animation: bounce 2s ease-in-out 1.2s infinite;
+        }
+        span:nth-child(5) {
+            animation: bounce 2s ease-in-out 1.6s infinite;
+        }
     }
-  }
 }
 
-
-
-
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 10;
-  padding-top: 20%;
-  left: 0;
-  top: 0;
-  width: 100%;
-
-  height: 100%;
-  overflow: auto;
-  background-color: rgba(0, 0, 0, 0.4);
-  .modal-content {
-    background-color: #F4F4F4;
-    margin: auto;
-    padding: 25px;
-    border: 1px solid $purpleshadow;
-    width: 80%;
-    max-width: 1200px;
-    .close {
-      color: #aaaaaa;
-      float: right;
-      font-size: 24px;
-      font-weight: bold;
-      &:hover, :focus {
-        color: $purpleshadow;
-        text-decoration: none;
-        cursor: pointer;
-      }
-    }
+@keyframes bounce  {
+  0%, 75%, 100% {
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+    transform: translateY(0);
+  }
+  25%{
+    -webkit-transform: translateY(-20px);
+    -ms-transform: translateY(-20px);
+    -o-transform: translateY(-20px);
+    transform: translateY(-20px);
   }
 }
