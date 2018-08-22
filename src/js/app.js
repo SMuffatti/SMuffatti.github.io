@@ -36,7 +36,6 @@ $(document).ready(function() {
 
 
 
-
   burgerbtn_toggle();
 
 
@@ -74,7 +73,7 @@ $(".nameplate").on("click", function() {
 });
 
 // Soft Scroll for Sidebar
-$("#sidebar-nav > ul > li").click(function(e) {
+$("#sidebar-nav > ul > li:not(:last-child)").click(function(e) {
   e.preventDefault();
   var curLink = $(this.children);
   var scrollPoint = $(curLink.attr('href')).position().top;
